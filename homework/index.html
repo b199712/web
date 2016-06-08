@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>帕比狗狗罐頭零食店</title>
+		<link rel=stylesheet type="text/css" href="cssFile/webStyle.css">
+		<script src="jsFile/function.js"></script>
+	
+    </head>
+    <body background="background.jpg" text="black" link="orange" alink="lightyellow" vlink="lightgreen">
+		<div id="total" align="center">
+			<div id="top">
+				<h1><marquee>帕比狗狗罐頭零食店</marquee></h1>
+			</div>
+			<div id="menu" align="center">
+				<ol>
+					
+					<li id="mainPage" class="submenu" onClick="changePage(this.id);"><a href="#"><b>首頁</b></a>
+					<li id="choice1" class="submenu" onmouseover="mouseover(this.id);"><a href="#"><b>商品介紹</b></a>
+                    	<ul>
+                        	<li id="mainFood"onClick="changePage(this.id);"><a href="#">主食類</a></li>
+                            <li id="snack" onClick="changePage(this.id);"><a href="#">零食類</a></li>
+                        </ul>
+					</li>
+					<li id="contact" class="submenu" onClick="changePage(this.id);"><a href="#"><b>聯絡我們</b></a>
+					
+				</ol>
+			</div>
+			<br>
+            <div id="content">
+            	<iframe src="./mainPage.html" id="displayPage" frameborder="0" scrolling="yes" width="900" height="900"></iframe>
+			</div>
+		</div>
+    </body>
+</html>

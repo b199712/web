@@ -1,0 +1,14 @@
+table {
+    text-align: center;
+    border-collapse: collapse;
+    border: none;
+}
+
+td{
+    border: none;
+}
+
+table td:nth-child(1){
+    background-color:#E0E0E0;
+}
+

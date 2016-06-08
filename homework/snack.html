@@ -1,0 +1,54 @@
+<html>
+    <head>
+		<style type="text/css">
+		</style>
+		<link rel=stylesheet type="text/css" href="cssFile/product.css">
+		<script src="jsFile/sharedFunction.js"></script>
+		<script>
+			
+
+				
+			function bodyOnLoad(){
+			
+				var defaultRow=3;
+				var defaultColumn=4;
+				var name=["TWISTIX恩棒原味潔牙骨","TWISTIX恩棒(牛奶起司)潔牙骨","Petio美味長雞肉條250g","香Q軟系列鮮雞肉捲心","Petio零脂肪狗狗肉條(14種野菜)","Petio零脂肪狗狗肉條(地瓜根莖)","360度立體清新潔牙骨M 5入","360度立體亮白潔牙骨M 20入"];
+				var description=["適合中及小型犬種.螺旋狀易咬不傷牙","適合中小型犬種 .含牛奶起司小麥","日本國產雞肉條.含豐富寡糖除臭成份","有嚼勁狗狗喜愛.夾鍊袋鮮包裝","精選低脂肪肉部分.波浪造型增加口感","添加地瓜及根莖類蔬果.波浪造型增加口感","特殊海藻粉添加.360° 3D立體造型","添加維生素、礦物質.360° 3D立體造型"];
+				var content=document.getElementById("snack_content");
+				var productNum=8;
+				var integer=Math.floor(productNum/defaultColumn);
+				var remainder=productNum%defaultColumn;
+				var brNum=5;
+				
+				for(var i=0;i<integer;i++){
+					createTable(content,defaultRow,defaultColumn+1);
+					for(var j=0;j<brNum;j++){
+						var br=document.createElement('br');
+						content.appendChild(br);
+					}
+				}
+				
+				if(remainder>0) createTable(content,defaultRow,remainder+1);
+				
+				var allTd=document.getElementsByTagName("td");
+				
+				tdProcess(allTd,defaultRow,defaultColumn,integer,remainder,name,"snack_",description);
+				
+			}
+		</script>
+    </head>
+    <body onload="bodyOnLoad();">
+        <div id="snack_content">
+<!--            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="picture/mainFood_1.jpg"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </tbody>
+            </table>
+-->        
+        </div>
+    </body>
+</html>

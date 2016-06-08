@@ -1,0 +1,51 @@
+<html>
+    <head>
+		<style type="text/css">
+		</style>
+		<link rel=stylesheet type="text/css" href="cssFile/product.css">
+		<script src="jsFile/sharedFunction.js"></script>
+		<script>
+			function bodyOnLoad(){
+			
+				var defaultRow=3;
+				var defaultColumn=4;
+				var name=["Seeds 惜時","NB地瓜鮭魚狗罐170g","CHICKEN愛狗天然食品70g","YOYO肉醬佐雞肉罐","seed機能料理罐","seed機能料理老犬罐","紐萃寶無穀低敏狗罐","亞米新配方營養狗罐"];
+				var description=["優質素材嫩雞為主.小型成犬一餐一罐","無穀低敏美國生產.改善過敏高級食材","肉類含量多25%.全鮮嫩雞肉底 ","羊牛雞肉醬汁組合.肉醬添雞肉等組合","含米飯機能配方.含雞湯鮮汁鮮濃味美","含米飯機能配方.含雞湯鮮汁鮮濃味美","添加 Omega3/Omega6 脂肪酸.來自紐西蘭的頂極嚴選","高鈣營養新配料.新配方亞米狗罐"];
+				var content=document.getElementById("mainFood_content");
+				var productNum=8;
+				var integer=Math.floor(productNum/defaultColumn);
+				var remainder=productNum%defaultColumn;
+				var brNum=5;
+				
+				for(var i=0;i<integer;i++){
+					createTable(content,defaultRow,defaultColumn+1);
+					for(var j=0;j<brNum;j++){
+						var br=document.createElement('br');
+						content.appendChild(br);
+					}
+				}
+				
+				if(remainder>0) createTable(content,defaultRow,remainder+1);
+				
+				var allTd=document.getElementsByTagName("td");
+				
+				tdProcess(allTd,defaultRow,defaultColumn,integer,remainder,name,"mainFood_",description);
+
+			}
+		</script>
+    </head>
+    <body onload="bodyOnLoad();">
+        <div id="mainFood_content">
+<!--            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="picture/mainFood_1.jpg"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </tbody>
+            </table>
+-->        
+        </div>
+    </body>
+</html>
